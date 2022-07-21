@@ -63,7 +63,7 @@ nav.navbar {
 
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #8a6f5a7c;
+  background-color: #947c6ad6;
 }
 
 nav.navbar a.navbar-brand {
@@ -526,6 +526,14 @@ button {
 
 .contact form button:hover::before {
   width: 100%;
+}
+
+/* Profile Icons */
+
+.techN {
+  width: 5%;
+  height: 5%;
+
 }
 
 /* FOOTER */

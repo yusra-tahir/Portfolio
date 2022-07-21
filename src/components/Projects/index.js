@@ -1,4 +1,4 @@
-import { Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../ProjectCard";
 import QuizProQuo from "../../assets/img/quiz-pro-quo.png";
 import Artfolio from "../../assets/img/artfolio.png";
@@ -7,8 +7,11 @@ import ADay from "../../assets/img/a-day.png";
 import UNWIND from "../../assets/img/unwind.png";
 import Portfolio from "../../assets/img/portfolio.png";
 import TrackVisibility from "react-on-screen";
+import { ArrowRightCircle } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
   const projects = [
     {
       title: "Portfolio",
@@ -59,7 +62,12 @@ const Projects = () => {
                   <p>
                     A collection of projects worked on over the last 3 months,
                     created over a one week period using agile techniques within
-                    a team.<br></br> Click on the project to see more!
+                    a team.<br></br>
+                    <br></br>
+                    {/* STYLING TO COME AFTER FOR BUTTON */}
+                    <button onClick={() => navigate("/projects")}>
+                      Find out more! <ArrowRightCircle size={25} />
+                    </button>
                   </p>
                   <Row>
                     {projects.map((project, index) => {
@@ -72,9 +80,6 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
-
-      
-      
     </section>
   );
 };

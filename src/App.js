@@ -1,28 +1,15 @@
 import "./App.css";
-// import { Routes, Route } from "react-router-dom";
-import {
-  Header,
-  Footer,
-  Banner,
-  Skills,
-  Projects,
-  Contact,
-} from "./components";
+import { Routes, Route } from "react-router-dom";
+import { MainPage, ProjectPage } from "./pages";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <Banner />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-
-      {/* <Routes>
-        <Route path="/" element={<Layout />}></Route>
-      </Routes> */}
+      <Routes>
+        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/projects" element={<ProjectPage />}></Route>
+      </Routes>
     </div>
   );
 };
